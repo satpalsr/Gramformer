@@ -99,10 +99,9 @@ influent_sentences = [
 ]   
 
 for influent_sentence in influent_sentences:
-    corrected_sentences = gf.correct(influent_sentence, max_candidates=1)
+    corrected_sentence = gf.correct(influent_sentence, max_candidates=1)[0]
     print("[Input] ", influent_sentence)
-    for corrected_sentence in corrected_sentences:
-      print("[Correction] ",corrected_sentence)
+    print("[Correction] ",corrected_sentence)
     print("-" *100)
 ```
 
@@ -168,10 +167,9 @@ influent_sentences = [
 ]   
 
 for influent_sentence in influent_sentences:
-    corrected_sentences = gf.correct(influent_sentence, max_candidates=1)
+    corrected_sentence = gf.correct(influent_sentence, max_candidates=1)[0]
     print("[Input] ", influent_sentence)
-    for corrected_sentence in corrected_sentences:
-      print("[Edits] ", gf.get_edits(influent_sentence, corrected_sentence[0]))
+    print("[Edits] ", gf.get_edits(influent_sentence, corrected_sentence[0]))
     print("-" *100)
 ```
 
@@ -218,10 +216,9 @@ influent_sentences = [
 ]   
 
 for influent_sentence in influent_sentences:
-    corrected_sentences = gf.correct(influent_sentence, max_candidates=1)
+    corrected_sentence = gf.correct(influent_sentence, max_candidates=1)[0]
     print("[Input] ", influent_sentence)
-    for corrected_sentence in corrected_sentences:
-      print("[Edits] ", gf.highlight(influent_sentence, corrected_sentence[0]))
+    print("[Edits] ", gf.highlight(influent_sentence, corrected_sentence[0]))
     print("-" *100)
 ```
 
